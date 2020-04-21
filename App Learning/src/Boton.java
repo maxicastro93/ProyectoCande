@@ -1,3 +1,4 @@
+import java.awt.Dimension;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -14,10 +15,16 @@ public class Boton
 		boton = new JToggleButton();
 	}
 	
-	public static void setImagen(JToggleButton b, Image i)
+	public static void setImagen(JToggleButton b, ImageIcon i)
 	{
-		ImageIcon imagen = new ImageIcon(i);
-		b.setIcon(imagen);
-		b.setSelectedIcon(imagen);
+		
+		b.setIcon(i);
+		b.setSelectedIcon(i);
+		int w = i.getIconWidth();
+        int h = i.getIconHeight();
+        b.setPreferredSize(new Dimension(w, h));
+        
+		
+		
 	}
 }

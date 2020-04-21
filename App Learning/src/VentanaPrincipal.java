@@ -92,14 +92,17 @@ public class VentanaPrincipal {
 		botonAparear.setBounds(271, 109, 157, 102);
 		frame.getContentPane().add(botonAparear);
 		
-		JButton button = new JButton("Aparear");
+		JButton button = new JButton("p");
 		button.setBounds(460, 109, 157, 102);
 		frame.getContentPane().add(button);
 		
 		JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
 		tglbtnNewToggleButton.setBounds(220, 227, 163, 164);
-		Image i = new Image("comer.jpg");
-		Boton.setImagen(tglbtnNewToggleButton, i);
+		
+		
+		
+		ImageIcon icon = new ImageIcon("book.jpg");
+//		Boton.setImagen(tglbtnNewToggleButton, icon);
 		frame.getContentPane().add(tglbtnNewToggleButton);
 		
 
