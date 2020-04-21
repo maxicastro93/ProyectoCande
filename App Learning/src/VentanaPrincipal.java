@@ -9,6 +9,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -94,6 +95,12 @@ public class VentanaPrincipal {
 		JButton button = new JButton("Aparear");
 		button.setBounds(460, 109, 157, 102);
 		frame.getContentPane().add(button);
+		
+		JToggleButton tglbtnNewToggleButton = new JToggleButton("New toggle button");
+		tglbtnNewToggleButton.setBounds(220, 227, 163, 164);
+		Image i = new Image("comer.jpg");
+		Boton.setImagen(tglbtnNewToggleButton, i);
+		frame.getContentPane().add(tglbtnNewToggleButton);
 		
 
 		

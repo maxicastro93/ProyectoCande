@@ -1,3 +1,5 @@
+import java.awt.Image;
+
 import javax.swing.ImageIcon;
 import javax.swing.JToggleButton;
 
@@ -12,7 +14,7 @@ public class Boton
 		boton = new JToggleButton();
 	}
 	
-	public void setImagen(JToggleButton b, String i)
+	public static void setImagen(JToggleButton b, Image i)
 	{
 		ImageIcon imagen = new ImageIcon(i);
 		b.setIcon(imagen);

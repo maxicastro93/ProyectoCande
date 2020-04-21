@@ -1,6 +1,7 @@
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
+import java.awt.Image;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
@@ -83,6 +84,10 @@ public class AparearGame {
 		this.imagenA.boton.setBounds(42, 109, 212, 149);
 		this.imagenB.boton.setBounds(271, 109, 212, 149);
 		this.imagenC.boton.setBounds(498, 109, 212, 149);
+		
+		Image i = new Image("comer.jpg").set;
+		
+		
 		
 		panel.add(imagenA.boton);
 		panel.add(imagenB.boton);
