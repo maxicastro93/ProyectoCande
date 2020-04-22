@@ -1,3 +1,4 @@
+package game;
 import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.Font;
@@ -85,7 +86,7 @@ public class AparearGame {
 		this.imagenB.boton.setBounds(271, 109, 212, 149);
 		this.imagenC.boton.setBounds(498, 109, 212, 149);
 		
-		Image i = new Image("comer.jpg").set;
+		
 		
 		
 		
