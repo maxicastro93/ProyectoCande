@@ -59,60 +59,49 @@ public class AparearGame {
 		frame.setBounds(400, 40, 403, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		frame.setSize(850, 700);
+		frame.setSize(1090, 700);
 		
 		//CREA EL PANEL
 		this.panel = new JPanel();
 		panel.setForeground(Color.LIGHT_GRAY);
 		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(100, 100, 650, 450);
+		panel.setBounds(100, 100, 890, 450);
 		this.frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
 		//TITULO DE LA VENTANA
 		JLabel tituloVentana = new JLabel("Seleccionar las imagenes relacionadas");
-		tituloVentana.setBounds(170, -100, 400, 300);
-		tituloVentana.setFont(new Font("Consolas", Font.PLAIN, 30));
-		tituloVentana.setHorizontalAlignment(SwingConstants.CENTER);
+		tituloVentana.setBounds(40, -100, 900, 300);
+		tituloVentana.setFont(new Font("Consolas", Font.PLAIN, 40));
+		tituloVentana.setHorizontalAlignment(SwingConstants.LEFT);
 		tituloVentana.setForeground(Color.BLACK);
 		panel.add(tituloVentana);
 		
 		this.frame.setVisible(true);
 		
-		imagenA = new Boton(0);
-		imagenB = new Boton(1);
-		imagenC = new Boton(2);
-		
+		imagenA = new Boton();
+		imagenB = new Boton();
+		imagenC = new Boton();
 		
 		
 		// UBICAR BOTONES EN EL JPANEL
-		this.imagenA.boton.setBounds(42, 109, 212, 149);
-		this.imagenB.boton.setBounds(271, 109, 212, 149);
-		this.imagenC.boton.setBounds(498, 109, 212, 149);
+		this.imagenA.boton.setBounds(142, 109, 212, 149);
+		this.imagenB.boton.setBounds(371, 109, 212, 149);
+		this.imagenC.boton.setBounds(598, 109, 212, 149);
 			
-//		CREA IMAGENES
-		ImageIcon icon = new ImageIcon("comer.jpg");
-		ImageIcon icon2 = new ImageIcon("neumatico.jpg");
-		ImageIcon icon3 = new ImageIcon("hamburguesa.jpg");
-		
-		
-		
-//		ASIGNA IMAGENES AL JTOGGLEBUTTON
-		Boton.setImagen(imagenA.boton, icon);
-		imagenA.boton.setSize(icon.getIconWidth()+25, icon.getIconHeight()+25);
-		
-		Boton.setImagen(imagenB.boton, icon2);
-		imagenB.boton.setSize(icon2.getIconWidth()+25, icon2.getIconHeight()+25);
-		
-		Boton.setImagen(imagenC.boton, icon3);
-		imagenC.boton.setSize(icon3.getIconWidth()+25, icon3.getIconHeight()+25);
+		ventanaOpcion1(panel, imagenA, imagenB, imagenC);
 		
 		panel.add(imagenA.boton);
 		panel.add(imagenB.boton);
 		panel.add(imagenC.boton);
 		
 
-        // ItemListener is notified whenever you clcik on the ToggleButton 
+        avisoPresionaBoton();
+
+	}
+
+	private void avisoPresionaBoton() {
+		// ItemListener es notificado cuando presionan un ToggleButton 
         ItemListener itemListener = new ItemListener() 
         { 
             // itemStateChanged() method is nvoked automatically 
@@ -144,42 +133,56 @@ public class AparearGame {
         imagenA.boton.addItemListener(itemListener);
         imagenB.boton.addItemListener(itemListener);
         imagenC.boton.addItemListener(itemListener);
-
-        
-        
-        
-
-		
-//		JButton botonColores = new JButton("Colores");
-//		botonColores.setBounds(84, 109, 157, 102);
-//		botonColores.setIcon(null);
-//		panel.add(botonColores);
-//		
-//		JButton botonAparear = new JButton("Aparear");
-//		botonAparear.setBounds(271, 109, 157, 102);
-//		panel.add(botonAparear);
-//		ArrayList<Boton> x = ventanaOpcion2();
-//		panel.add(x.get(0).boton);
-//		panel.add(x.get(1).boton);
-//		panel.add(x.get(2).boton);
-		
-		
-			
-			
-
 	}
+	
+	
 	public boolean checkEsCorrecto(Boton a, Boton b, Boton c)
 	{
-		if (a.boton.isSelected() && b.boton.isSelected() && c.boton.isSelected()==false)
+		if (a.boton.isSelected() && b.boton.isSelected() && c.boton.isSelected()==false && a.id==1 && b.id==1)
 		{
 			System.out.println("Ganaste perri");
 			return true;
 		}
+		
+		else if (a.boton.isSelected() && c.boton.isSelected() && b.boton.isSelected()==false && a.id==1 && c.id==1 )
+		{
+			System.out.println("Ganaste perri");
+			return true;
+		}
+		
+		else if (b.boton.isSelected() && c.boton.isSelected() && a.boton.isSelected()==false && b.id==1 && c.id==1)
+		{
+			System.out.println("Ganaste perri");
+			return true;
+		}
+		
 		System.out.println("Loseer");
 		return false;
+		
 	// COMPLETAR CON LA ACCION DE FINALIZAR LA VENTANA Y CARGAR NUEVAS IMAGENES 
 	
 	
+	}
+	
+	
+	public void ventanaOpcion1(JPanel p, Boton a, Boton b, Boton c)
+	{
+//		CREA IMAGENES
+		ImageIcon icon = new ImageIcon("comer.jpg");
+		a.setId(1);
+		ImageIcon icon2 = new ImageIcon("neumatico.jpg");
+		b.setId(0);
+		ImageIcon icon3 = new ImageIcon("hamburguesa.jpg");
+		c.setId(1);
+//		ASIGNA IMAGENES AL JTOGGLEBUTTON
+		Boton.setImagen(imagenA.boton, icon);
+		imagenA.boton.setSize(icon.getIconWidth()+25, icon.getIconHeight()+25);
+		
+		Boton.setImagen(imagenB.boton, icon2);
+		imagenB.boton.setSize(icon2.getIconWidth()+25, icon2.getIconHeight()+25);
+		
+		Boton.setImagen(imagenC.boton, icon3);
+		imagenC.boton.setSize(icon3.getIconWidth()+25, icon3.getIconHeight()+25);
 	}
 
 

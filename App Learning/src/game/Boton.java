@@ -10,9 +10,9 @@ public class Boton
 	public JToggleButton boton;
 	public int id;
 	
-	public Boton (int n)
+	public Boton ()
 	{
-		id = n;
+		id = 0;
 		boton = new JToggleButton();
 	}
 	
@@ -25,7 +25,11 @@ public class Boton
         int h = i.getIconHeight();
         b.setPreferredSize(new Dimension(w, h));
         
-		
-		
 	}
+	public void setId (int x)
+	{
+		this.id = x;
+	}
+	
+	
 }
