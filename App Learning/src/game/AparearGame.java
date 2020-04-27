@@ -7,6 +7,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.util.ArrayList;
 
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -58,13 +59,13 @@ public class AparearGame {
 		frame.setBounds(400, 40, 403, 500);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		frame.setSize(1100, 1000);
+		frame.setSize(850, 700);
 		
 		//CREA EL PANEL
 		this.panel = new JPanel();
 		panel.setForeground(Color.LIGHT_GRAY);
 		panel.setBackground(Color.LIGHT_GRAY);
-		panel.setBounds(100, 100, 901, 650);
+		panel.setBounds(100, 100, 650, 450);
 		this.frame.getContentPane().add(panel);
 		panel.setLayout(null);
 		
@@ -81,14 +82,30 @@ public class AparearGame {
 		imagenA = new Boton(0);
 		imagenB = new Boton(1);
 		imagenC = new Boton(2);
+		
+		
+		
 		// UBICAR BOTONES EN EL JPANEL
 		this.imagenA.boton.setBounds(42, 109, 212, 149);
 		this.imagenB.boton.setBounds(271, 109, 212, 149);
 		this.imagenC.boton.setBounds(498, 109, 212, 149);
+			
+//		CREA IMAGENES
+		ImageIcon icon = new ImageIcon("comer.jpg");
+		ImageIcon icon2 = new ImageIcon("neumatico.jpg");
+		ImageIcon icon3 = new ImageIcon("hamburguesa.jpg");
 		
 		
 		
+//		ASIGNA IMAGENES AL JTOGGLEBUTTON
+		Boton.setImagen(imagenA.boton, icon);
+		imagenA.boton.setSize(icon.getIconWidth()+25, icon.getIconHeight()+25);
 		
+		Boton.setImagen(imagenB.boton, icon2);
+		imagenB.boton.setSize(icon2.getIconWidth()+25, icon2.getIconHeight()+25);
+		
+		Boton.setImagen(imagenC.boton, icon3);
+		imagenC.boton.setSize(icon3.getIconWidth()+25, icon3.getIconHeight()+25);
 		
 		panel.add(imagenA.boton);
 		panel.add(imagenB.boton);
@@ -131,7 +148,8 @@ public class AparearGame {
         
         
         
-        
+
+		
 //		JButton botonColores = new JButton("Colores");
 //		botonColores.setBounds(84, 109, 157, 102);
 //		botonColores.setIcon(null);

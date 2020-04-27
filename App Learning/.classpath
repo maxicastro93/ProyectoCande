@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
-	<classpathentry exported="true" kind="lib" path="comer.jpg"/>
-	<classpathentry kind="lib" path="hamburguesa.jpg"/>
-	<classpathentry kind="lib" path="neumatico.jpg"/>
-	<classpathentry kind="lib" path="src/VentanaPrincipal.java"/>
-	<classpathentry kind="lib" path="src/AparearGame.java"/>
-	<classpathentry kind="lib" path="src/Boton.java"/>
-	<classpathentry kind="lib" path="src/Colors.java"/>
-	<classpathentry kind="lib" path=".settings/org.eclipse.jdt.core.prefs"/>
-	<classpathentry kind="lib" path=".classpath"/>
-	<classpathentry kind="lib" path=".gitignore"/>
-	<classpathentry kind="lib" path=".project"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
