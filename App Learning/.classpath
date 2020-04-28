@@ -2,5 +2,23 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="src/game/arco.jpg"/>
+	<classpathentry kind="lib" path="src/game/avion.jpg"/>
+	<classpathentry kind="lib" path="src/game/comer.jpg"/>
+	<classpathentry kind="lib" path="src/game/dormir.jpg"/>
+	<classpathentry kind="lib" path="src/game/hamburguesa.jpg"/>
+	<classpathentry kind="lib" path="src/game/neumatico.jpg"/>
+	<classpathentry kind="lib" path="src/game/pelota.jpg"/>
+	<classpathentry kind="lib" path="src/game/perro 1.jpg"/>
+	<classpathentry kind="lib" path="src/game/perro 2.jpg"/>
+	<classpathentry kind="lib" path="arco.jpg"/>
+	<classpathentry kind="lib" path="avion.jpg"/>
+	<classpathentry kind="lib" path="comer.jpg"/>
+	<classpathentry kind="lib" path="dormir.jpg"/>
+	<classpathentry kind="lib" path="hamburguesa.jpg"/>
+	<classpathentry kind="lib" path="neumatico.jpg"/>
+	<classpathentry kind="lib" path="pelota.jpg"/>
+	<classpathentry kind="lib" path="perro 1.jpg"/>
+	<classpathentry kind="lib" path="perro 2.jpg"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
